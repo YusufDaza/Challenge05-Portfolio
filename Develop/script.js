@@ -18,7 +18,7 @@ $(function () {
   $(".time-block").each(function () {
     var currentHour = dayjs().hour();
     var blockHour = parseInt($(this).attr("id").split("-")[1]);
-
+console.log(currentHour,blockHour,this)
     if (blockHour < currentHour) {
       $(this).removeClass("present future").addClass("past");
     } else if (blockHour === currentHour) {
